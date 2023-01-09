@@ -15,7 +15,7 @@ struct Product {
 
 int main() {
     vector<product> products;
-    map<int, vector<int="">&gt; sales;
+    map<int, vector<int="">> sales;
 
     // Add products to the vector
     products.push_back(Product{"Product 1", 1, "Area 1", 10.00, 15.00});
@@ -43,21 +43,27 @@ int main() {
 
     // Search for product by ID
     int searchID;
-    cout &lt;&lt; "Enter product ID to search: ";
-    cin &gt;&gt; searchID;
+    cout << "Enter product ID to search: ";
+    cin >> searchID;
 
     for (Product p : products) {
         if (p.id == searchID) {
-            cout &lt;&lt; "Product Name: " &lt;&lt; p.name &lt;&lt; endl;
-            cout &lt;&lt; "Product ID: " &lt;&lt; p.id &lt;&lt; endl;
-            cout &lt;&lt; "Selling Area: " &lt;&lt; p.area &lt;&lt; endl;
-            cout &lt;&lt; "Cost: " &lt;&lt; p.cost &lt;&lt; endl;
-            cout &lt;&lt; "Selling Price: " &lt;&lt; p.sellingPrice &lt;&lt; endl;
-            cout &lt;&lt; "Monthly Sales: ";
+            cout << "Product Name: << p.name << endl;
+            cout << "Product ID: << p.id << endl;
+            cout << "Selling Area: << p.area << endl;
+            cout << "Cost: " << p.cost << endl;
+            cout << "Selling Price: << p.sellingPrice << endl;
+            cout << "Monthly Sales: ";
             for (int s : sales[searchID]) {
-                cout &lt;&lt; s &lt;&lt; " ";
+                cout << s << " ";
             }
-            cout &lt;&lt; endl;
+            
+            else { cout<<"The Produact is not found" ;
+                   cout << "Enter product ID to search: ";
+                   cin >> searchID;
+                      }
+                      
+            cout<<endl;
             break;
         }
     }
