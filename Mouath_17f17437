@@ -1,1 +1,66 @@
-Test 
+#include <iostream>
+#include <string>
+#include <map>
+#include <vector>
+
+using namespace std;
+
+struct Product {
+    string name;
+    int id;
+    string area;
+    double cost;
+    double sellingPrice;
+};
+
+int main() {
+    vector<product> products;
+    map<int, vector<int="">&gt; sales;
+
+    // Add products to the vector
+    products.push_back(Product{"Product 1", 1, "Area 1", 10.00, 15.00});
+    products.push_back(Product{"Product 2", 2, "Area 2", 20.00, 25.00});
+    products.push_back(Product{"Product 3", 3, "Area 3", 30.00, 35.00});
+    products.push_back(Product{"Product 4", 4, "Area 4", 40.00, 45.00});
+    products.push_back(Product{"Product 5", 5, "Area 5", 50.00, 55.00});
+
+    // Add sales to the map
+    sales[1].push_back(10);
+    sales[1].push_back(20);
+    sales[1].push_back(30);
+    sales[2].push_back(15);
+    sales[2].push_back(25);
+    sales[2].push_back(35);
+    sales[3].push_back(20);
+    sales[3].push_back(30);
+    sales[3].push_back(40);
+    sales[4].push_back(25);
+    sales[4].push_back(35);
+    sales[4].push_back(45);
+    sales[5].push_back(30);
+    sales[5].push_back(40);
+    sales[5].push_back(50);
+
+    // Search for product by ID
+    int searchID;
+    cout &lt;&lt; "Enter product ID to search: ";
+    cin &gt;&gt; searchID;
+
+    for (Product p : products) {
+        if (p.id == searchID) {
+            cout &lt;&lt; "Product Name: " &lt;&lt; p.name &lt;&lt; endl;
+            cout &lt;&lt; "Product ID: " &lt;&lt; p.id &lt;&lt; endl;
+            cout &lt;&lt; "Selling Area: " &lt;&lt; p.area &lt;&lt; endl;
+            cout &lt;&lt; "Cost: " &lt;&lt; p.cost &lt;&lt; endl;
+            cout &lt;&lt; "Selling Price: " &lt;&lt; p.sellingPrice &lt;&lt; endl;
+            cout &lt;&lt; "Monthly Sales: ";
+            for (int s : sales[searchID]) {
+                cout &lt;&lt; s &lt;&lt; " ";
+            }
+            cout &lt;&lt; endl;
+            break;
+        }
+    }
+
+    return 0;
+}</int,></product></vector></map></string></iostream>
