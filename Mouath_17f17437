@@ -15,7 +15,7 @@ struct Product {
 
 int main() {
     vector<product> products;
-    map<int, vector<int="">> sales;
+
 
     // Add products to the vector
     products.push_back(Product{"Product 1", 1, "Area 1", 10.00, 15.00});
@@ -24,22 +24,7 @@ int main() {
     products.push_back(Product{"Product 4", 4, "Area 4", 40.00, 45.00});
     products.push_back(Product{"Product 5", 5, "Area 5", 50.00, 55.00});
 
-    // Add sales to the map
-    sales[1].push_back(10);
-    sales[1].push_back(20);
-    sales[1].push_back(30);
-    sales[2].push_back(15);
-    sales[2].push_back(25);
-    sales[2].push_back(35);
-    sales[3].push_back(20);
-    sales[3].push_back(30);
-    sales[3].push_back(40);
-    sales[4].push_back(25);
-    sales[4].push_back(35);
-    sales[4].push_back(45);
-    sales[5].push_back(30);
-    sales[5].push_back(40);
-    sales[5].push_back(50);
+
 
     // Search for product by ID
     int searchID;
