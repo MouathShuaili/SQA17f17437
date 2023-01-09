@@ -59,8 +59,7 @@ int main() {
             }
             
             else { cout<<"The Produact is not found" ;
-                   cout << "Enter product ID to search: ";
-                   cin >> searchID;
+                  
                       }
                       
             cout<<endl;
